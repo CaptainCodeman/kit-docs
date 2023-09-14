@@ -7,10 +7,10 @@
 
   import SvelteLogo from '$img/svelte-horizontal.svg?raw';
 
+  import { base } from '$app/paths';
   import { page } from '$app/stores';
 
   import {
-    createKitDocsLoader,
     KitDocs,
     KitDocsLayout,
     Button,
@@ -27,7 +27,7 @@
   /** @type {import('@svelteness/kit-docs').NavbarConfig} */
   const navbar = {
     links: [
-      { title: 'Docs', slug: '/docs', match: /\/docs/ },
+      { title: 'Docs', slug: `${base}/docs`, match: /\/docs/ },
       { title: 'Tutorials', slug: 'https://svelte.dev/tutorial' },
       { title: 'Examples', slug: 'https://svelte.dev/examples' },
       { title: 'REPL', slug: 'https://svelte.dev/repl' },
@@ -58,7 +58,7 @@
   <KitDocsLayout {navbar} {sidebar}>
     <div slot="navbar-left">
       <div class="logo">
-        <Button href="/">
+        <Button href="{base}/">
           {@html SvelteLogo}
         </Button>
       </div>
