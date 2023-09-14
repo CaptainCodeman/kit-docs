@@ -8,7 +8,7 @@ You cannot `export default`, since the default export is the component itself.
 
 :::admonition type=warning
 
-Variables defined in `module` scripts are not reactive — reassigning them will not trigger a rerender even though the variable itself will update. For values shared between multiple components, consider using a [store](../runtime/stores.md).
+Variables defined in `module` scripts are not reactive — reassigning them will not trigger a rerender even though the variable itself will update. For values shared between multiple components, consider using a [store](../../runtime/stores.md).
 
 :::
 

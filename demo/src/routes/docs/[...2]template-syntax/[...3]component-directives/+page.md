@@ -6,7 +6,7 @@
 on:eventname={handler}
 ```
 
-Components can emit events using [createEventDispatcher](../runtime/svelte.md#createeventdispatcher), or by forwarding DOM events. Listening for component events looks the same as listening for DOM events:
+Components can emit events using [createEventDispatcher](../../runtime/svelte.md#createeventdispatcher), or by forwarding DOM events. Listening for component events looks the same as listening for DOM events:
 
 ```svelte
 <SomeComponent on:whatever={handler}/>
@@ -392,7 +392,7 @@ As with `<svelte:window>` and `<svelte:body>`, this element may only appear at t
 <svelte:options option={value}/>
 ```
 
-The `<svelte:options>` element provides a place to specify per-component compiler options, which are detailed in the [compiler section](../compiler/compile.md). The possible options are:
+The `<svelte:options>` element provides a place to specify per-component compiler options, which are detailed in the [compiler section](../../compiler/compile.md). The possible options are:
 
 - `immutable={true}` — you never use mutable data, so the compiler can do simple referential equality checks to determine if values have changed
 - `immutable={false}` — the default. Svelte will be more conservative about whether or not mutable objects have changed

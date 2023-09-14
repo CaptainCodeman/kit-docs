@@ -10,7 +10,7 @@ A `<script>` block contains JavaScript that runs when a component instance is cr
 
 #### 1. `export` creates a component prop
 
-Svelte uses the `export` keyword to mark a variable declaration as a _property_ or _prop_, which means it becomes accessible to consumers of the component (see the section on [attributes and props](../template-syntax/foundation.md#attributes-and-props) for more information).
+Svelte uses the `export` keyword to mark a variable declaration as a _property_ or _prop_, which means it becomes accessible to consumers of the component (see the section on [attributes and props](../../template-syntax/foundation.md#attributes-and-props) for more information).
 
 ```svelte
 <script>
@@ -23,7 +23,7 @@ Svelte uses the `export` keyword to mark a variable declaration as a _property_ 
 
 You can specify a default initial value for a prop. It will be used if the component's consumer doesn't specify the prop on the component (or if its initial value is `undefined`) when instantiating the component. Note that whenever a prop is removed by the consumer, its value is set to `undefined` rather than the initial value.
 
-In development mode (see the [compiler options](../compiler/compile.md#svelte-compile)), a warning will be printed if no default initial value is provided and the consumer does not specify a value. To squelch this warning, ensure that a default initial value is specified, even if it is `undefined`.
+In development mode (see the [compiler options](../../compiler/compile.md#svelte-compile)), a warning will be printed if no default initial value is provided and the consumer does not specify a value. To squelch this warning, ensure that a default initial value is specified, even if it is `undefined`.
 
 ```svelte
 <script>
@@ -34,7 +34,7 @@ In development mode (see the [compiler options](../compiler/compile.md#svelte-co
 
 If you export a `const`, `class` or `function`, it is readonly from outside the component. Function _expressions_ are valid props, however.
 
-Readonly props can be accessed as properties on the element, tied to the component using [`bind:this` syntax](../template-syntax/component-directives.md#bindthis).
+Readonly props can be accessed as properties on the element, tied to the component using [`bind:this` syntax](../../template-syntax/component-directives.md#bindthis).
 
 ```svelte
 <script>
@@ -153,7 +153,7 @@ If a statement consists entirely of an assignment to an undeclared variable, Sve
 
 #### 4. Prefix stores with `$` to access their values
 
-A _store_ is an object that allows reactive access to a value via a simple _store contract_. The [`svelte/store` module](../runtime/stores.md) contains minimal store implementations which fulfil this contract.
+A _store_ is an object that allows reactive access to a value via a simple _store contract_. The [`svelte/store` module](../../runtime/stores.md) contains minimal store implementations which fulfil this contract.
 
 Any time you have a reference to a store, you can access its value inside a component by prefixing it with the `$` character. This causes Svelte to declare the prefixed variable, subscribe to the store at component initialization and unsubscribe when appropriate.
 
@@ -184,7 +184,7 @@ Local variables (that do not represent store values) must _not_ have a `$` prefi
 store = { subscribe: (subscription: (value: any) => void) => (() => void), set?: (value: any) => void }
 ```
 
-You can create your own stores without relying on [`svelte/store`](../runtime/stores.md), by implementing the _store contract_:
+You can create your own stores without relying on [`svelte/store`](../../runtime/stores.md), by implementing the _store contract_:
 
 1. A store must contain a `.subscribe` method, which must accept as its argument a subscription function. This subscription function must be immediately and synchronously called with the store's current value upon calling `.subscribe`. All of a store's active subscription functions must later be synchronously called whenever the store's value changes.
 2. The `.subscribe` method must return an unsubscribe function. Calling an unsubscribe function must stop its subscription, and its corresponding subscription function must not be called again by the store.

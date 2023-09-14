@@ -1,7 +1,7 @@
 # Transitions
 
 The `svelte/transition` module exports seven functions: `fade`, `blur`, `fly`, `slide`, `scale`,
-`draw` and `crossfade`. They are for use with Svelte [`transitions`](../[...2]template-syntax/[...2]element-directives.md#transition-fn).
+`draw` and `crossfade`. They are for use with Svelte [`transitions`](../../template-syntax/element-directives.md#transition-fn).
 
 ## `fade`
 
@@ -241,7 +241,7 @@ The `crossfade` function creates a pair of [transitions](../template-syntax/elem
 - `delay` (`number`, default 0) — milliseconds before starting
 - `duration` (`number` | `function`, default 800) — milliseconds the transition lasts
 - `easing` (`function`, default `cubicOut`) — an [easing function](./easing.md)
-- `fallback` (`function`) — A fallback [transition](../template-syntax/element-directives.md#transitionfn) to use for send when there is no matching element being received, and for receive when there is no element being sent.
+- `fallback` (`function`) — A fallback [transition](../../template-syntax/element-directives.md#transitionfn) to use for send when there is no matching element being received, and for receive when there is no element being sent.
 
 ```svelte
 <script>

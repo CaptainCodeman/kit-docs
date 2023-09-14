@@ -14,7 +14,7 @@ onMount(callback: () => () => void)
 
 The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM. It must be called during the component's initialisation (but doesn't need to live _inside_ the component; it can be called from an external module).
 
-`onMount` does not run inside a [server-side component](../component-api/server.md).
+`onMount` does not run inside a [server-side component](../../component-api/server.md).
 
 ```svelte
 <script>
@@ -216,7 +216,7 @@ Retrieves the whole context map that belongs to the closest parent component. Mu
 dispatch: ((name: string, detail?: any) => void) = createEventDispatcher();
 ```
 
-Creates an event dispatcher that can be used to dispatch [component events](../template-syntax/component-directives.md#oneventname). Event dispatchers are functions that can take two arguments: `name` and `detail`.
+Creates an event dispatcher that can be used to dispatch [component events](../../template-syntax/component-directives.md#oneventname). Event dispatchers are functions that can take two arguments: `name` and `detail`.
 
 Component events created with `createEventDispatcher` create a [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). These events do not [bubble](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture) and are not cancellable with `event.preventDefault()`. The `detail` argument corresponds to the [CustomEvent.detail](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail) property and can contain any type of data.
 

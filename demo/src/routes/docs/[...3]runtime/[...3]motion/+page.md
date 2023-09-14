@@ -12,7 +12,7 @@ Tweened stores update their values over a fixed duration. The following options 
 
 - `delay` (`number`, default 0) — milliseconds before starting
 - `duration` (`number` | `function`, default 400) — milliseconds the tween lasts
-- `easing` (`function`, default `t => t`) — an [easing function](../runtime/easing.md)
+- `easing` (`function`, default `t => t`) — an [easing function](../../runtime/easing.md)
 - `interpolate` (`function`) — see below
 
 `store.set` and `store.update` can accept a second `options` argument that will override the options passed in upon instantiation.
@@ -95,7 +95,7 @@ A `spring` store gradually changes to its target value based on its `stiffness` 
 - `damping` (`number`, default `0.8`) — a value between 0 and 1 where lower means a 'springier' spring
 - `precision` (`number`, default `0.01`) — determines the threshold at which the spring is considered to have 'settled', where lower means more precise
 
-As with [`tweened`](../runtime/motion.md#tweened) stores, `set` and `update` return a Promise that resolves if the spring settles. The `store.stiffness` and `store.damping` properties can be changed while the spring is in motion, and will take immediate effect.
+As with [`tweened`](../../runtime/motion.md#tweened) stores, `set` and `update` return a Promise that resolves if the spring settles. The `store.stiffness` and `store.damping` properties can be changed while the spring is in motion, and will take immediate effect.
 
 Both `set` and `update` can take a second argument — an object with `hard` or `soft` properties. `{ hard: true }` sets the target value immediately; `{ soft: n }` preserves existing momentum for `n` seconds before settling. `{ soft: true }` is equivalent to `{ soft: 0.5 }`.
 

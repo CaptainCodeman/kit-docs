@@ -1,6 +1,6 @@
 # Custom Element
 
-Svelte components can also be compiled to custom elements (aka web components) using the `customElement: true` compiler option. You should specify a tag name for the component using the `<svelte:options>` [element](../template-syntax/component-directives.md#svelte-options).
+Svelte components can also be compiled to custom elements (aka web components) using the `customElement: true` compiler option. You should specify a tag name for the component using the `<svelte:options>` [element](../../template-syntax/component-directives.md#svelte-options).
 
 ```svelte
 <svelte:options tag="my-element" />
@@ -32,7 +32,7 @@ document.body.innerHTML = `
 ```
 
 By default, custom elements are compiled with `accessors: true`, which means that any
-[props](../template-syntax/foundation.md#attributes-and-props) are exposed as properties of the
+[props](../../template-syntax/foundation.md#attributes-and-props) are exposed as properties of the
 DOM element (as well as being readable/writable as attributes, where possible).
 
 To prevent this, add `accessors={false}` to `<svelte:options>`.
